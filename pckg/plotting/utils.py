@@ -18,7 +18,6 @@ def plot_fibo(numbers, **kwargs):
     plt.scatter(range(len(numbers)), numbers, **kwargs)
     plt.xlabel('Rank')
     plt.ylabel('Value')
-    
 
     
 # https://jaketae.github.io/study/prime-spirals/    
