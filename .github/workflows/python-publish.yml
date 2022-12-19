@@ -12,6 +12,8 @@ on:
 #  release:
 #    types: [published]
   push:
+    branches:
+      - main
     tags:
       - v*
 
