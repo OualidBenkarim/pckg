@@ -17,8 +17,8 @@ on:
     tags:
       - v*
 
-permissions:
-  contents: read
+#permissions:
+#  contents: read
 
 jobs:
   deploy:
