@@ -45,18 +45,18 @@ jobs:
         echo "Tag name from GITHUB_REF_NAME: $GITHUB_REF_NAME"
         echo "Tag name from github.ref_name: ${{  github.ref_name }}"
 
-#    - name: Create Github release.
-#      uses: "marvinpinto/action-automatic-releases@latest"
-#      with:
-#        repo_token: "${{ secrets.GITHUB_TOKEN }}"
-#        prerelease: false
-#        files: |
-#          LICENSE
-#          dist/*
-#
-#    - name: Publish package
-#      uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
-#      with:
-#        user: __token__
-#        password: ${{ secrets.TEST_PYPI_TOKEN_PCKG }}
-#        repository_url: https://test.pypi.org/legacy/
+    - name: Create Github release.
+      uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        prerelease: false
+        files: |
+          LICENSE
+          dist/*
+
+    - name: Publish package
+      uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
+      with:
+        user: __token__
+        password: ${{ secrets.TEST_PYPI_TOKEN_PCKG }}
+        repository_url: https://test.pypi.org/legacy/
