@@ -39,12 +39,16 @@ jobs:
     - name: Build package
       run: python -m build
 
+    - name: GitHub Tag Name example
+      run: |
+        echo "Tag name from GITHUB_REF_NAME: $GITHUB_REF_NAME"
+        echo "Tag name from github.ref_name: ${{  github.ref_name }}"
+
     - name: Create Github release.
-      uses: "marvinpinto/action-automatic-releases@v1.2.1"
+      uses: "marvinpinto/action-automatic-releases@latest"
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         prerelease: false
-        automatic_release_tag: "latest"
         files: |
           LICENSE
           dist/*
